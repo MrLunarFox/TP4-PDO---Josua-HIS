@@ -16,7 +16,7 @@ class Continent {
     private $libelle;
     
     /**
-     * Get the value of num
+     * Get the value of Num
      */ 
     public function getNum()
     {

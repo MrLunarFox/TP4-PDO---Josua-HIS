@@ -15,7 +15,7 @@ private static $monPdo;
 private static $unPdo = null;
 
 //	Constructeur privé, crée l'instance de PDO qui sera sollicitée
-//	pour toutes les méthodes de la classe
+//	pour toutes les méthodes de la Classe
 private function __construct()
 {
     MonPdo::$unPdo = new PDO(MonPdo::$serveur.';'.MonPdo::$bdd, MonPdo::$user, MonPdo::$mdp);
