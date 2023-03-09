@@ -129,9 +129,11 @@ class Nationalite {
      */
     public static function update(Nationalite $nationalite) :int
     {
-        $req=MonPdo::getInstance()->prepare("update nationalite set libelle= :libelle, numContinent= :numContinent where num= :num");
-        $req->bindParam(':id', $nationalite->getNum());
-        $req->bindParam(':libelle', $nationalite->getLibelle());
+        $req=MonPdo::getInstance()->prepare("update nationalite set libelle= :libelle, numContinent= :numContinent where num= :id");
+        $num=$nationalite->getNum();
+        $libelle=$nationalite>getLibelle();
+        $req->bindParam(':id', $num);
+        $req->bindParam(':libelle', $libelle);
         $req->bindParam(':numContinent', $nationalite->numContinent());
         $nb=$req->execute();
         return $nb;

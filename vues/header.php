@@ -29,7 +29,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
-  <a class="navbar-brand pl-5" href="#">Ma Bibliothèque</a>
+  <a class="navbar-brand pl-5" href="index.php">Ma Bibliothèque</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -56,6 +56,13 @@
         <div class="dropdown-menu" aria-labelledby="dropdown01">
           <a class="dropdown-item" href="listeNationalites.php">Liste des nationalités</a>
           <a class="dropdown-item" href="formAjoutNationalite.php">Ajouter une nationalité</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i> Gestion des continents</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" href="index.php?uc=continents&action=list">Liste des continents</a>
+          <a class="dropdown-item" href="index.php?uc=continents&action=add">Ajouter un continent</a>
         </div>
       </li>
     </ul>
