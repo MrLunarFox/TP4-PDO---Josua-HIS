@@ -18,11 +18,11 @@
     <?php
     foreach($lesNationalites as $nationalite){
         echo "<tr class='d-flex'>";
-        echo "<td class='col-md-2'>".$nationalite->getNum()."</td>";
-        echo "<td class='col-md-8'>".$nationalite->getLibelle()."</td>";
+        echo "<td class='col-md-2'>".$nationalite->getNum2()."</td>";
+        echo "<td class='col-md-8'>".$nationalite->getLibelle2()."</td>";
         echo "<td class='col-md-2'>
-            <a href='index.php?uc=nationalites&action=update&num=".$nationalite->getNum()."' class='btn btn-primary'><i class='fas fa-pen'></i></a>
-            <a href='#modalSuppression' data-toggle='modal' data-message='Voulez vous supprimer le nationalite ?' data-suppression='index.php?uc=nationalites&action=delete&num=".$nationalite->getNum()."' class='btn btn-danger'><i class='far fa-trash-alt'></i></a>
+            <a href='index.php?uc=nationalites&action=update&num=".$nationalite->getNum2()."' class='btn btn-primary'><i class='fas fa-pen'></i></a>
+            <a href='#modalSuppression' data-toggle='modal' data-message='Voulez vous supprimer le nationalite ?' data-suppression='index.php?uc=nationalites&action=delete&num=".$nationalite->getNum2()."' class='btn btn-danger'><i class='far fa-trash-alt'></i></a>
         </td>";
         echo "</tr>";
     }

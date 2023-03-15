@@ -16,44 +16,47 @@ class Nationalite {
     private $libelle;
     
     /**
-     * Get the value of Num
+     * Get numero du Nationalite
+     *
+     * @return  int
      */ 
     public function getNum2()
     {
-    return $this->num;
+        return $this->num;
     }
 
     /**
-     * Lit le libelle
+     * Get libelle du Nationalite
      *
-     * @return string
-     */
-    public function getLibelle2() : string
+     * @return  string
+     */ 
+    public function getLibelle2()
     {
-    return $this->libelle;
+        return $this->libelle;
     }
 
     /**
-     * Ecrit dans le libelle
+     * Set libelle du Nationalite
      *
-     * @param string $libelle
-     * @return self
-     */
-    public function setLibelle2(string $libelle) : self
-    {
-    $this->libelle = $libelle;
-
-    return $this;
-    }
-
-    /**
-     * Set numero de la Nationalite
-     *
-     * @param  int  $num  Numero de la Nationalite
+     * @param  string  $libelle  Libelle du Nationalite
      *
      * @return  self
      */ 
-    public function setNum2(int $num) :self
+    public function setLibelle2(string $libelle)
+    {
+        $this->libelle = $libelle;
+
+        return $this;
+    }
+
+    /**
+     * Set numero du Nationalite
+     *
+     * @param  int  $num  Numero du Nationalite
+     *
+     * @return  self
+     */ 
+    public function setNum2(int $num)
     {
         $this->num = $num;
 

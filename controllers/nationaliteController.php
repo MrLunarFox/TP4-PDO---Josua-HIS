@@ -28,12 +28,12 @@ switch($action){
     case 'validForm' :
         $Nationalite= new Nationalite();
         if(empty($_POST['num'])){ // cas d'une création
-            $nationalite->setLibelle($_POST['libelle']);
+            $nationalite->setLibelle2($_POST['libelle']);
             $nb=Nationalite::add($nationalite);
             $message = "ajouté";
         }else{ //cas d'une modif
-            $nationalite->setNum($_POST['num']);
-            $nationalite->setLibelle($_POST['libelle']);
+            $nationalite->setNum2($_POST['num']);
+            $nationalite->setLibelle2($_POST['libelle']);
             $nb=Nationalite::update($nationalite);
             $message = "modifié";
         }
