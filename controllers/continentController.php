@@ -19,7 +19,7 @@ switch($action){
     case 'validForm' :
         $continent= new Continent();
         if(empty($_POST['num'])){ // cas d'une création
-            $continent->setLibelle($_POST['num']);
+            $continent->setLibelle($_POST['libelle']);
             $nb=Continent::add($continent);
             $message = "ajouté";
         }else{ //cas d'une modif
