@@ -30,7 +30,7 @@ class Nationalite {
      *
      * @return  string
      */ 
-    public function getLibelle2()
+    public function getLibelle2() : string
     {
         return $this->libelle;
     }
@@ -42,7 +42,7 @@ class Nationalite {
      *
      * @return  self
      */ 
-    public function setLibelle2(string $libelle)
+    public function setLibelle2(string $libelle) : self
     {
         $this->libelle = $libelle;
 
@@ -56,7 +56,7 @@ class Nationalite {
      *
      * @return  self
      */ 
-    public function setNum2(int $num)
+    public function setNum2(int $num) :self
     {
         $this->num = $num;
 

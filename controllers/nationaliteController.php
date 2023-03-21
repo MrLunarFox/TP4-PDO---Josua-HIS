@@ -26,7 +26,7 @@ switch($action){
         exit();
         break;
     case 'validForm' :
-        $Nationalite= new Nationalite();
+        $nationalite= new Nationalite();
         if(empty($_POST['num'])){ // cas d'une création
             $nationalite->setLibelle2($_POST['libelle']);
             $nb=Nationalite::add($nationalite);
