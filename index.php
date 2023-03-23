@@ -5,6 +5,7 @@ session_start();
 include "vues/header.php";
 include "modeles/Continent.php";
 include "modeles/Nationalite.php";
+include "modeles/Auteur.php";
 include "modeles/monPdo.php";
 include "vues/messageFlash.php";
 
@@ -17,10 +18,14 @@ switch($uc){
   case 'continents' :
     include('Controllers/continentController.php');
     break;
-    case 'nationalites' :
-      include('Controllers/nationaliteController.php');
-      break;
-}
+  case 'nationalites' :
+    include('Controllers/nationaliteController.php');
+    break;
+  case 'auteurs' :
+    include('Controllers/auteurController.php');
+    break;
+  }
+
 
 include "vues/footer.php";
 ?>
