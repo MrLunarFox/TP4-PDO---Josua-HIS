@@ -8,6 +8,8 @@ class Auteur {
          */
     private $num;
 
+    private $numNas;
+
         /**
          * Nom du Auteur
          *
@@ -56,6 +58,16 @@ class Auteur {
         return $this->num;
     }
 
+     /**
+     * Get numero du Auteur
+     *
+     * @return  int
+     */ 
+    public function getNum3A()
+    {
+        return $this->numNas;
+    }
+
     /**
      * Get Nom du Auteur
      *
@@ -90,6 +102,20 @@ class Auteur {
     public function setNum3(int $num) :self
     {
         $this->num = $num;
+
+        return $this;
+    }
+
+    /**
+     * Set numero du Auteur
+     *
+     * @param  int  $num  Numero du Auteur
+     *
+     * @return  self
+     */ 
+    public function setNum3A(int $numNas) :self
+    {
+        $this->numNas = $numNas;
 
         return $this;
     }
@@ -149,13 +175,15 @@ class Auteur {
      */
     public static function update(Auteur $auteur) :int
     {
-        $req=MonPdo::getInstance()->prepare("update auteur set nom= :nom && prenom= :prenom where num= :id");
+        $req=MonPdo::getInstance()->prepare("update auteur set nom= :nom && prenom= :prenom && numNas= :numNationalite where num= :id");
         $num=$auteur->getNum3();
         $nom=$auteur->getNom3();
         $prenom=$auteur->getPrenom3();
+        $numNas=$auteur->getNum3A();
         $req->bindParam(':id', $num);
         $req->bindParam(':nom', $nom);
         $req->bindParam(':prenom', $prenom);
+        $req->bindParam(':numNationalite', $numNas);
         $nb=$req->execute();
         return $nb;
     }

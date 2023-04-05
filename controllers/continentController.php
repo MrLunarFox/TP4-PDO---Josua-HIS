@@ -2,6 +2,7 @@
 $action=$_GET['action'];
 switch($action){
     case 'list' :
+        var_dump($action);
         $lesContinents=Continent::findAll();
         include('vues/listeContinent.php');
         break;

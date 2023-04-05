@@ -16,13 +16,13 @@ switch($uc){
     include('vues/accueil.php');
     break;
   case 'continents' :
-    include('Controllers/continentController.php');
+    include('controllers/continentController.php');
     break;
   case 'nationalites' :
-    include('Controllers/nationaliteController.php');
+    include('controllers/nationaliteController.php');
     break;
   case 'auteurs' :
-    include('Controllers/auteurController.php');
+    include('controllers/auteurController.php');
     break;
   }
 
